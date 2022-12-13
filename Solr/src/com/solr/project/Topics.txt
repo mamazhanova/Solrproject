@@ -1,1 +1,24 @@
-rrd
+Hadoop
+hdfs
+Nginx
+Routing
+Redundancy
+Row
+Does search API Url change if we change the cluster?
+Batch index
+Streaming index
+Nested fields
+<str　
+<int
+Inverted index
+Can we create schema together so I have an understanding what a schema is within a search engine
+Concepts of Boosting, Relevancy and search-engine based analytics and how they create load on a search system and how they affect users
+How does search scale for index size, query speed or volume?
+How search UI features affect query volume
+Query load
+Query cycle
+Query filters
+How caching performance impacts search engine/query speed and memory utilization
+High availability and how it is different from disaster recovery
+How search engines scale across hardware based on query load and index size
+Time and complexity of re-indexing efforts
