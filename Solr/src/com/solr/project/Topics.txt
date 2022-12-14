@@ -2,23 +2,31 @@ Hadoop
 hdfs
 Nginx
 Routing
-Redundancy
+Redundancy(Atomicity/Concistency/Isolation/Durability)
 Row
-Does search API Url change if we change the cluster?
-Batch index
-Streaming index
-Nested fields
-<str　
-<int
-Inverted index
+Does search API(application programming interface) Url(uniform resource()data) locator) change if we change the cluster(same feature reduntant N number of times)?:Routing
+Batch index( filter or search is index, when search is applied on a batch of data, batch : collection of data)
+Streaming index(json/xml/http/csv:when we try to pass multiple formats at one time : stream of formats.fruits(csv/json/http/xml))
+Nested fields(a column that can be further classified nested column or a nested field)
+Employee : name/designation/id
+designation : senior junior intern etc etc (nested columns(RDBMS) or fields(NoSql))
+<str　: stringfield or column : collection of characters - non number value : varchar(variable charcter)>
+<int :  field or column contains integer or number values>
+Inverted index: Replaced or removed index or no search criteria : implicit indexing
 Can we create schema together so I have an understanding what a schema is within a search engine
+
 Concepts of Boosting, Relevancy and search-engine based analytics and how they create load on a search system and how they affect users
-How does search scale for index size, query speed or volume?
-How search UI features affect query volume
-Query load
-Query cycle
-Query filters
-How caching performance impacts search engine/query speed and memory utilization
-High availability and how it is different from disaster recovery
-How search engines scale across hardware based on query load and index size
-Time and complexity of re-indexing efforts
+
+How does search scale for index size(more the index size, easier is the sear because the filter helps to come down to a small amount of data), query speed(high again because of low data handling) or volume(more the index more the query volume)?
+query is heavy ->qps low (how fast the query is executed)
+query volume is high( how much big is the query)
+
+How search UI features or indexing  affect query volume: directly proportional?(one index or query which shall be converted by parser will be repeatative)
+Query load( the aount of indexing to be done/index load)
+Query cycle(entire process from user query to respnse from response writer/query processing)
+Query filters(indexers)
+How caching performance impacts search engine/query speed and memory utilization(caching can degrage the searching if we don't remove the cached data periodically): solution : replace the older value of the cache with the newer one
+b=1
+High availability(can be used with minimum dependencies)  and how it is different from disaster recovery ( development systemintegrationtestin useraacceptancetesting production(extra features) drPROD(backup with basic features))
+How search engines scale across hardware based on query load and index size( cloud or cluster so hardware or on premises shouldn't be a concern)
+Time and space complexity of re-indexing efforts(updaterequest handler): the query with maximum filters will reduce the time of data retrieval but space is a constracint only for on premisies(local system). Normally we dploy on cloud
